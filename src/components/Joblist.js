@@ -9,15 +9,12 @@ const Joblist = () => {
   const [jobs, setJobs] = useContext(Jobs);
   useEffect(() => {
     async function fetchJobs() {
-      const jobArr = await axios.get(
-        'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json',
-        {
-          params: { description: search.job, location: search.location },
-          headers: {
-            'User-Agent': 'request',
-          },
-        }
-      );
+      const jobArr = await axios.get('https://jobs.github.com/positions.json', {
+        params: { description: search.job, location: search.location },
+        headers: {
+          'User-Agent': 'request',
+        },
+      });
 
       setJobs(jobArr.data);
     }
