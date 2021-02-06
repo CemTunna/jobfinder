@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Home from './components/Home';
+import Joblist from './components/Joblist';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { ContextProvider } from './Context';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <ContextProvider>
+            <Route path='/' exact component={Home} />
+            <Route path='/joblist/' exact component={Joblist} />
+          </ContextProvider>
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

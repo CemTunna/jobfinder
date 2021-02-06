@@ -1,0 +1,72 @@
+.joblist__title {
+  text-align: center;
+  padding: 0.3em 1em 0.1em 1em;
+  font-weight: 200;
+  text-transform: capitalize;
+  color: #396afc;
+  width: 100%;
+  font-size: 1.7em;
+}
+.containerr {
+  margin: 0 auto;
+  max-width: 1100px;
+  flex-wrap: wrap;
+  display: flex;
+
+  padding: 4rem 1rem 4rem 1rem;
+}
+.card {
+  border: 2px solid #396afc;
+  background-color: #396afc;
+  border-radius: 70px;
+  color: #fff;
+  width: 50%;
+  margin-bottom: 2em;
+  text-align: center;
+  transition: transform 500ms;
+  font-weight: 100;
+}
+.card:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+.card__title {
+  display: inline-block;
+  line-height: 1em;
+  max-width: 100%;
+  margin: 0.5em;
+}
+.card__footer {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.card__footer {
+  width: 70%;
+}
+.card__button {
+  outline: none;
+  width: 70%;
+  padding: 0.8em 1.2em;
+  background-image: linear-gradient(to right, #00f260, #0575e6);
+  color: white;
+  border-radius: 100px;
+  font-size: large;
+  cursor: pointer;
+  margin: 0.7em;
+}
+.card__button:hover {
+  opacity: 0.5;
+}
+@media (max-width: 600px) {
+  .card {
+    border: 2px solid #396afc;
+    background-color: #396afc;
+    border-radius: 70px;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 2em;
+    text-align: center;
+    font-weight: 100;
+  }
+}
