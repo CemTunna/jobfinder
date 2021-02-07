@@ -19,7 +19,7 @@ const Home = ({ history }) => {
   return (
     <div className='home'>
       <div className='home__title'>
-        <h1>JobFinder</h1>
+        <h1>JobFInderr</h1>
       </div>
 
       <div className='container'>

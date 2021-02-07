@@ -25,7 +25,7 @@ const Joblist = () => {
     <>
       <div className='joblist__title'>
         <Link to='/' className='linktohome'>
-          JobFinder{' '}
+          JobFInderr{' '}
         </Link>
       </div>
 
