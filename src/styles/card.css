@@ -1,18 +1,21 @@
 .joblist__title {
+  margin: 0 auto;
   text-align: center;
-  padding: 0.3em 1em 0.1em 1em;
-  font-weight: 200;
+  padding: 1.3em;
   text-transform: capitalize;
-  color: #396afc;
   width: 100%;
-  font-size: 1.7em;
+}
+.linktohome {
+  text-decoration: none;
+  font-weight: 200;
+  color: #396afc;
+  font-size: 3em;
 }
 .containerr {
   margin: 0 auto;
   max-width: 1100px;
   flex-wrap: wrap;
   display: flex;
-
   padding: 4rem 1rem 4rem 1rem;
 }
 .card {

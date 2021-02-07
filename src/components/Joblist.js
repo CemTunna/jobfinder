@@ -3,13 +3,14 @@ import { Jobs } from '../Context';
 import { Inputs } from '../Context';
 import axios from 'axios';
 import Card from '../utils/card';
-import LazyLoad from 'react-lazyload';
+import { Link } from 'react-router-dom';
+
 const Joblist = () => {
   const [search, setSearch] = useContext(Inputs);
   const [jobs, setJobs] = useContext(Jobs);
   useEffect(() => {
     async function fetchJobs() {
-      const jobArr = await axios.get('https://jobs.github.com/positions.json', {
+      const jobArr = await axios.get('/positions.json', {
         params: { description: search.job, location: search.location },
         headers: {
           'User-Agent': 'request',
@@ -20,19 +21,18 @@ const Joblist = () => {
     }
     fetchJobs();
   }, [search]);
-  console.log('from joblistt', jobs);
   return (
     <>
       <div className='joblist__title'>
-        <h1>JobFinder</h1>
+        <Link to='/' className='linktohome'>
+          JobFinder{' '}
+        </Link>
       </div>
 
       <div className='containerr'>
-        <LazyLoad once={true} height={100} offset={[100, 200]}>
-          {jobs.map((job, idx) => (
-            <Card job={job} />
-          ))}
-        </LazyLoad>
+        {jobs.map((job, idx) => (
+          <Card job={job} key={job.id} />
+        ))}
       </div>
     </>
   );

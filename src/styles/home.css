@@ -68,4 +68,13 @@ body {
 
     font-size: 1.3em;
   }
+  .form__item {
+    width: 100%;
+    border-color: #396afc;
+    border-radius: 10px;
+    padding: 0.1em;
+  }
+  .form__item + .form__item {
+    margin-left: 5px;
+  }
 }

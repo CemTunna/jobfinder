@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/card.css';
 const card = ({ job }) => {
-  const { title, location, type } = job;
+  const { title, location, type, id } = job;
 
   return (
     <div className='card'>
@@ -11,10 +11,11 @@ const card = ({ job }) => {
         <p> {location}</p>
         <p>{type}</p>
       </div>
-
-      <button to='/details/' className='card__button'>
-        Details <i class='fas fa-chevron-right'></i>
-      </button>
+      <Link to={`/details/${id}`}>
+        <button className='card__button'>
+          Details <i className='fas fa-chevron-right'></i>
+        </button>
+      </Link>
     </div>
   );
 };

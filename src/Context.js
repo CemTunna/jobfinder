@@ -5,7 +5,6 @@ export const Inputs = createContext(null);
 export const ContextProvider = ({ children }) => {
   const [search, setSearch] = useState({ job: '', location: '' });
   const [jobs, setJobs] = useState([]);
-  console.log('from context job:', search.job, 'location:', search.location);
   return (
     <Jobs.Provider value={[jobs, setJobs]}>
       <Inputs.Provider value={[search, setSearch]}>{children}</Inputs.Provider>
