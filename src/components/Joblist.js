@@ -10,7 +10,7 @@ const Joblist = () => {
   const [jobs, setJobs] = useContext(Jobs);
   useEffect(() => {
     async function fetchJobs() {
-      const jobArr = await axios.get('/positions.json', {
+      const jobArr = await axios.get('https://jobs.github.com/positions.json', {
         params: { description: search.job, location: search.location },
         headers: {
           'User-Agent': 'request',

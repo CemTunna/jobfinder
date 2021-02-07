@@ -9,7 +9,7 @@ const Details = ({ match }) => {
   useEffect(() => {
     async function fetchJobs() {
       const jobArr = await axios.get(
-        `/positions/${match.params.id}.json?markdown=true`,
+        `https://jobs.github.com/positions/${match.params.id}.json?markdown=true`,
         {
           headers: {
             'User-Agent': 'request',
